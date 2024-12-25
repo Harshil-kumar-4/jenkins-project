@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App with Auth</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-container">
+            <div id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+            </div>
+            
+            <div id="register-form" class="auth-form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="register()">Register</button>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+            </div>
+        </div>
+
+        <div id="todo-container" style="display: none;">
+            <h2>Todo List</h2>
+            <div class="add-todo">
+                <input type="text" id="new-todo" placeholder="Add a new todo">
+                <button onclick="addTodo()">Add</button>
+            </div>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

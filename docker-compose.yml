@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - todo-data:/app/instance
+    environment:
+      - FLASK_ENV=development
+    restart: unless-stopped
+
+volumes:
+  todo-data:
